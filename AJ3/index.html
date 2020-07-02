@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>AJ3.1</title>
+</head>
+<body>
+    <h1>Name checker</h1>
+    <form>
+        <label for="name">First name:</label>
+        <input type="text" name="name" onkeyup="showName(this.value)">
+    </form>
+    <p>Suggestions: <span id="nameHint"></span></p>
+
+    <script>
+        function showName(str){
+            if(str.length == 0){
+                document.getElementById("nameHint").innerHTML = '';
+                return;
+            }else{
+                var http = new XMLHttpRequest();
+                http.onreadystatechange = function(){
+                    if(this.readyState == 4 && this.status == 200){
+                        document.getElementById("nameHint").innerHTML = this.responseText;
+                    }
+                }
+                http.open("GET", "index.php?q=" + str, true);
+                http.send();
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJ2.2</title>
+</head>
+<body>
+    <script>
+        class Zivotinja{
+            oglasiSe(){
+                return "Ja sam životinja!";
+            }
+        }
+        class Macka extends Zivotinja{
+            constructor(brojNogu){
+                super();
+                this.brojNogu = brojNogu;
+            }
+            oglasiSe(){
+                return "Ja sam maca!";
+            }
+            opisiMe(){
+                return "Maca ima " + this.brojNogu + " noge!";
+            }
+        }
+        class Pas extends Zivotinja{
+            constructor(brojNogu){
+                super();
+                this.brojNogu = brojNogu;
+            }
+            oglasiSe(){
+                return "Ja sam pas!";
+            }
+            opisiMe(){
+                return "Pas ima " + this.brojNogu + " noge!";
+            }
+        }
+        class Papagaj extends Zivotinja{
+            constructor(brojNogu){
+                super();
+                this.brojNogu = brojNogu;
+            }
+            oglasiSe(){
+                return "Ja sam papagaj!";
+            }
+            opisiMe(){
+                return "Papagaj ima " + this.brojNogu + " nogu!";
+            }
+        }
+        var maca = new Macka(4);
+        console.log(maca.oglasiSe());
+        console.log(maca.opisiMe());
+
+        var pas = new Pas(4);
+        console.log(pas.oglasiSe());
+        console.log(pas.opisiMe());
+
+        var papagaj = new Papagaj(2);
+        console.log(papagaj.oglasiSe());
+        console.log(papagaj.opisiMe());
+    </script>
+</body>
+</html>

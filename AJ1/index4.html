@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJ1.4</title>
+</head>
+<body>
+    <script>
+        class Calculator{
+            constructor(num1, num2){
+                this.num1 = num1;
+                this.num2 = num2;
+            }
+            saberi(){return this.num1 + this.num2;}
+            oduzmi(){return this.num1 - this.num2;}
+            pomnozi(){return this.num1 * this.num2;}
+            podijeli(){return this.num1 / this.num2;}
+        }
+        var c= new Calculator(10, 4);
+        console.log("Sabiranje: " + c.saberi());
+        console.log("Oduzimanje: " + c.oduzmi());
+        console.log("Množenje: " + c.pomnozi());
+        console.log("Dijeljenje: " + c.podijeli());
+    </script>
+</body>
+</html>

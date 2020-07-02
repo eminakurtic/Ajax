@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJ2.1</title>
+</head>
+<body>
+    <script>
+        function Zivotinja(brojNogu){
+            this.brojNogu = brojNogu;
+            this.oglasiSe = function(){
+                return "Ja sam životinja.";
+            }
+        }
+
+        var Macka = Object.create(Zivotinja);
+        Macka.OglasiSe = function(){
+            return Zivotinja.oglasiSe() + ". I to maca!";
+
+        }
+
+        var Pas = Object.create(Zivotinja);
+        Pas.oglasiSe = function(){
+            return Zivotinja.oglasiSe() + "I to pas!";
+        }
+
+        var Papagaj = Object.create(Zivotinja);
+        Papagaj.OglasiSe = function(){
+            return Zivotinja.oglasiSe() + "I to papagaj!";
+        }
+
+        var Zivotinja = new Zivotinja;
+        console.log(Zivotinja.oglasiSe());
+
+        Macka.brojNogu = 4;
+        console.log(Macka.OglasiSe());
+        console.log("Maca ima " + Macka.brojNogu + " noge!");
+
+        Pas.brojNogu = 4;
+        console.log(Pas.oglasiSe());
+        console.log("Pas ima " + Pas.brojNogu + " noge!");
+
+        Papagaj.brojNogu = 2;
+        console.log(Papagaj.OglasiSe());
+        console.log("Papagaj ima " + Papagaj.brojNogu + " noge!");
+
+    </script>
+</body>
+</html>

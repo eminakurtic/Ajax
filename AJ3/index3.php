@@ -1,0 +1,1 @@
+[{"team1: "BiH", "team2:"Japan", "result:"5:1"}]

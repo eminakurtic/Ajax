@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJ1.6</title>
+</head>
+<body>
+    <script>
+        var otac = {
+            get: function(){
+                return this.val;
+            },
+            val: 42
+        }
+        console.log("Otac: " + otac.get());
+    
+        var dijete = Object.create(otac);
+        console.log("Dijete1: " + dijete.get());
+        dijete.val = 57;
+        console.log("Dijete2: " + dijete.get());
+    
+        var unuk = Object.create(dijete);
+        console.log("Unuk1: " + unuk.get());
+        dijete.val = 37;
+        console.log("Unuk2: " + unuk.get());
+    
+        console.log("Otac2: " + otac.get());
+        console.log("Dijete3: " + dijete.get());
+    </script>
+    
+</body>
+</html>

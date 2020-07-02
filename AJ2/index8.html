@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJ2.8</title>
+</head>
+<body>
+    <script>
+     
+        class Osoba{
+            constructor(ime){
+                if(ime !== ""){
+                    this._ime = ime;
+                }else{
+                    console.error("Greška: Ime je prazno!");
+                }
+            }
+            get ime(){
+                return this._ime;
+            }
+            set ime(ime){
+                if(ime !== ""){
+                    this._ime = ime;
+                }else{
+                    console.error("Greška: Ime je prazno!");
+                }
+            }
+        }
+
+        var Emina = new Osoba("");
+        Emina.ime = "A";
+        alert(Emina.ime);
+    </script>
+    
+    
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJ1.5</title>
+</head>
+<body>
+    <script>
+        function myFunc(){
+            return this.val;
+        }
+        var obj1 = {
+            vrati: myFunc,
+            val: 20
+        }
+        var obj2 = {
+            vrati: myFunc,
+            val: 10
+        }
+    
+        alert(obj1.vrati());
+        alert(obj2.vrati());
+        alert(myFunc());
+    </script>
+    
+</body>
+</html>

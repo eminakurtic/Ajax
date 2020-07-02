@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJ2.4</title>
+</head>
+<body>
+    <script>
+        // Pristup varijabli kreiranom izvana (globalni LexicalEnvironment)
+        var a = 5;
+
+        function f(){
+            alert(a);
+        }
+
+        f();
+
+        // Pristupo varijabli kreiranoj unutar (lokalni LexicalEnvironment) -> ne može
+        function f1(){
+            var b = 10;
+        }
+        //alert(b);
+
+        // Pristup skoro pa ugnježđenih funkcija -> prikazat c = 20
+        var c = 20;
+        function f2(){
+            var c = 30;
+            f3();
+        }
+        function f3(){
+            alert(c);
+        }
+        f2();
+
+        // Ugnježđenje funkcije -> d će se ispisati d = 50
+        var d = 40;
+        function f4(){
+            var d = 50;
+            function f5(){
+                alert(d);
+            }
+            return f5;
+        }
+        var func4 = f4();
+        func4;
+        
+    </script>
+</body>
+</html>
